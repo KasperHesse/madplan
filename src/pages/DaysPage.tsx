@@ -435,7 +435,7 @@ function MealCard({
                             updateRef(idx, { recipeId: e.target.value })
                           }
                         >
-                          {recipes.map((r) => (
+                          {recipes.sort((a,b) => a.name.localeCompare(b.name)).map((r) => (
                             <option key={r.id} value={r.id}>
                               {r.name || "(uden navn)"} — til {r.feedsPeople}{" "}
                               pers.
